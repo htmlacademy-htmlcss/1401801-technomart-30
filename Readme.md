@@ -1,7 +1,7 @@
 # Личный проект «Техномарт»
 
 * Студент: [Влад Прохоров](https://up.htmlacademy.ru/htmlcss/30/user/1401801).
-* Наставник: '[Артем Глуханько] (https://htmlacademy.ru/profile/v1z)'.
+* Наставник: [Артем Глуханько](https://htmlacademy.ru/profile/v1z).
 
 ---
 
