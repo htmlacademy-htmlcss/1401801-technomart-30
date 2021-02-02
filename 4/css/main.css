@@ -1,0 +1,245 @@
+@font-face {
+    font-family: "PT Sans";
+    src: url("fonts/ptsans.woff2") format("woff2"),
+    url("fonts/ptsans.woff") format("woff");
+    font-weight: 400;
+    font-style: normal;
+}
+@font-face {
+    font-family: "PT Sans";
+    src: url("fonts/ptsansbold.woff2") format("woff2"),
+    url("fonts/ptsansbold.woff") format("woff");
+    font-weight: 700;
+    font-style: normal;
+}
+@font-face {
+  font-family: "Cuprum";
+  src: url("fonts/cuprum.woff2") format("woff2"),
+  url("fonts/cuprum.woff") format("woff");
+  font-weight: 400;
+  font-style: normal;
+}
+@font-face {
+  font-family: "Cuprum";
+  src: url("fonts/cuprumbold.woff2") format("woff2"),
+  url("fonts/cuprumbold.woff") format("woff");
+  font-weight: 700;
+  font-style: normal;
+}
+@font-face {
+  font-family: "Cuprum";
+  src: url("fonts/cuprumitalic.woff2") format("woff2"),
+  url("fonts/cuprumitalic.woff") format("woff");
+  font-weight: 400;
+  font-style: italic;
+}
+@font-face {
+  font-family: "Cuprum";
+  src: url("fonts/cuprumbolditalic.woff2") format("woff2"),
+  url("fonts/cuprumbolditalic.woff") format("woff");
+  font-weight: 700;
+  font-style: italic;
+}
+:root {
+  --white: #FFFFFF;
+  --red: #EE3643;
+  --error:#Ba2732;
+  --hover-red:#CA2C37;
+  --basic-greylight:#c5c5c5;
+  --header-blue:#293449;
+  --active-header-blue:#161D29;
+  --nav-blue:#32425C;
+  --black:#000000;
+  --button-green:#63A63E;
+  --object-yellow:#FFBF47;
+  --object-blue:#3BBCE3;
+  --object-purple:#DC91D8;
+  --object-green:#8ED78F;
+  --object-yellow-add:#FFC047;
+  --price:#A9A9A9;
+  --adress-footer:#F3F7F9;
+  --nav-footer:#F1F5F7;
+  --another-nav-footer:#FFD180;
+}
+body {
+  min-width: 960px;
+  margin: 0;
+  padding: 0;
+  font-family: "Cuprum", Arial, sans-serif;
+  font-size: 18px;
+  line-height: 24px;
+  font-weight: 400;
+}
+a {
+  text-decoration: none;
+  color:var(--white);
+}
+img{
+  max-width: 100%;
+  height: auto;
+}
+.top-header {
+  background-color: var(--header-blue);
+  color:var(--white);
+}
+.phrase {
+  font-style: italic;
+  font-size: 16px;
+  line-height: 23px;
+  color: var(--red);
+}
+.phone-number {
+  font-weight: 700;
+  font-size: 21px;
+  line-height: 30px;
+  color:var(--red);
+}
+.header-adress{
+  font-size: 14px;
+  color:var(--nav-blue);
+}
+a span {
+  color:var(--white);
+}
+a span:active {
+  opacity: 50%;
+}
+.user-nav {
+  color:var(--black);
+  font-size: 21px;
+  line-height: 21px;
+}
+.user-nav:active {
+  color:var(--basic-greylight);
+}
+.user-nav:hover {
+  color:var(--red)
+}
+.main-nav {
+  background-color: var(--nav-blue);
+}
+.site-nav {
+  list-style: none;
+}
+.site-nav a {
+  color:var(--white);
+}
+.site-nav a:active {
+  opacity: 50%;
+}
+.categories {
+  color:var(--white);
+  font-size: 24px;
+  line-height: 30px;
+  font-weight: 700;
+}
+.object-1 {
+  background-color: var(--object-yellow);
+}
+.object-2 {
+  background-color:var(--object-blue);
+}
+.object-3 {
+  background-color: var(--object-purple);
+}
+.object-4 {
+  background-color: var(--object-green);
+}
+.object-5 {
+  background-color: var(--object-yellow-add);
+}
+.slider-text {
+  color:var(--white);
+  font-size: 36px;
+  line-height: 36px;
+  background-color: var(--black);
+}
+.button {
+  font-size: 14px;
+  line-height: 18px;
+  color:var(--white);
+  background-color: var(--red);
+}
+.h2 {
+  font-size: 30px;
+  line-height: 30px;
+}
+.name-of-card {
+  font-family: "PT Sans, Arial, sans-serif";
+  font-size: 18px;
+  line-height: 20px;
+  font-weight: 700;
+}
+.prise {
+  font-family: "PT Sans, Arial, sans-serif";
+  font-size: 17px;
+  line-height: 18px;
+  background-color: (red);
+}
+.prise-del {
+  font-family: "PT Sans, Arial, sans-serif";
+  font-size: 17px;
+  line-height: 18px;
+  text-decoration: line-through;
+  color:var(--price);
+}
+.label:active {
+  opacity:50%;
+}
+.phrase-2 {
+  font-family: "PT Sans, Arial, sans-serif";
+  font-size: 13px;
+  line-height: 24px;
+}
+.slider-text-2 {
+  font-weight: 700;
+  font-size: 21px;
+  line-height: 30px;
+}
+.color {
+  color:var(--nav-blue);
+}
+.footer {
+  background-color: var(--nav-blue);
+}
+.footer-2 {
+  background-color: var(--header-blue);
+}
+.another-site-nav{
+  list-style: none;
+}
+.another-site-nav a {
+  color: var(--another-nav-footer);
+}
+.copyright {
+  color: var(--white);
+  font-size: 16px;
+  line-height: 18px;
+}
+.list-decoration:hover {
+  text-decoration: underline;
+}
+.list-decoration:active {
+  opacity: 50%;
+  text-decoration: none;
+}
+.footer-adress {
+  color: var(--white);
+}
+.feedback {
+  color: var(--white);
+  font-size: 16px;
+  line-height: 18px;
+}
+.go-another-site {
+  color:var(--another-nav-footer);
+  font-size: 16px;
+  line-height: 18px;
+}
+.go-another-site:hover {
+  text-decoration: underline;
+}
+.go-another-site:active {
+  color: var(--red);
+  text-decoration: none;
+}
