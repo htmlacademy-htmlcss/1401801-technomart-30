@@ -78,17 +78,17 @@ img{
   max-width: 100%;
   height: auto;
 }
-.top-header {
+.header-wrapper {
   background-color: var(--header-blue);
   color:var(--white);
 }
-.phrase {
+.subtitle {
   font-style: italic;
   font-size: 16px;
   line-height: 23px;
   color: var(--red);
 }
-.phone-number {
+.header-phone {
   font-weight: 700;
   font-size: 21px;
   line-height: 30px;
@@ -104,51 +104,51 @@ a span {
 a span:active {
   opacity: 50%;
 }
-.user-nav {
+.sign-in-up {
   color:var(--black);
   font-size: 21px;
   line-height: 21px;
 }
-.user-nav:active {
+.sign-in-up:active {
   color:var(--basic-greylight);
 }
-.user-nav:hover {
+.sign-in-up:hover {
   color:var(--red)
 }
 .main-nav {
   background-color: var(--nav-blue);
 }
-.site-nav {
+.nav-list {
   list-style: none;
 }
-.site-nav a {
+.nav-list a {
   color:var(--white);
 }
-.site-nav a:active {
+.nav-list a:active {
   opacity: 50%;
 }
-.categories {
+.menu {
   color:var(--white);
   font-size: 24px;
   line-height: 30px;
   font-weight: 700;
 }
-.object-1 {
+.box-material {
   background-color: var(--object-yellow);
 }
-.object-2 {
+.box-tools {
   background-color:var(--object-blue);
 }
-.object-3 {
+.box-equipment {
   background-color: var(--object-purple);
 }
-.object-4 {
+.box-sale {
   background-color: var(--object-green);
 }
-.object-5 {
+.box-delivery {
   background-color: var(--object-yellow-add);
 }
-.slider-text {
+.slider-header {
   color:var(--white);
   font-size: 36px;
   line-height: 36px;
@@ -160,38 +160,38 @@ a span:active {
   color:var(--white);
   background-color: var(--red);
 }
-.h2 {
+.headline {
   font-size: 30px;
   line-height: 30px;
 }
-.name-of-card {
+.popular-card-title {
   font-family: "PT Sans, Arial, sans-serif";
   font-size: 18px;
   line-height: 20px;
   font-weight: 700;
 }
-.prise {
+.price {
   font-family: "PT Sans, Arial, sans-serif";
   font-size: 17px;
   line-height: 18px;
-  background-color: (red);
+  background-color: var(--red);
 }
-.prise-del {
+.price-del {
   font-family: "PT Sans, Arial, sans-serif";
   font-size: 17px;
   line-height: 18px;
   text-decoration: line-through;
   color:var(--price);
 }
-.label:active {
+.manufacturers:active {
   opacity:50%;
 }
-.phrase-2 {
+.slogan {
   font-family: "PT Sans, Arial, sans-serif";
   font-size: 13px;
   line-height: 24px;
 }
-.slider-text-2 {
+.slider-title {
   font-weight: 700;
   font-size: 21px;
   line-height: 30px;
@@ -202,13 +202,13 @@ a span:active {
 .footer {
   background-color: var(--nav-blue);
 }
-.footer-2 {
+.small-footer {
   background-color: var(--header-blue);
 }
-.another-site-nav{
+.another-nav-list {
   list-style: none;
 }
-.another-site-nav a {
+.another-nav-list a {
   color: var(--another-nav-footer);
 }
 .copyright {
@@ -226,20 +226,30 @@ a span:active {
 .footer-adress {
   color: var(--white);
 }
-.feedback {
-  color: var(--white);
-  font-size: 16px;
-  line-height: 18px;
-}
-.go-another-site {
+.footer-link {
   color:var(--another-nav-footer);
   font-size: 16px;
   line-height: 18px;
 }
-.go-another-site:hover {
+.footer-link:hover {
   text-decoration: underline;
 }
-.go-another-site:active {
+.footer-link:active {
   color: var(--red);
   text-decoration: none;
+}
+.vk-icon {
+  background-image:
+  url(img/icons/icon-vk.svg);
+}
+.fb-icon {
+  background-image:
+  url(img/icons/icon-fb.svg);
+}
+.insta-icon {
+  background-image:
+  url(img/icons/icon-insta.svg);
+}
+.socials {
+  list-style: none;
 }
