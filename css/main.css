@@ -205,10 +205,10 @@ a span:active {
 .small-footer {
   background-color: var(--header-blue);
 }
-.another-nav-list {
+.footer-nav-list {
   list-style: none;
 }
-.another-nav-list a {
+.footer-nav-list a {
   color: var(--another-nav-footer);
 }
 .copyright {
