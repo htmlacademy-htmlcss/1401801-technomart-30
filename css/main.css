@@ -66,6 +66,8 @@
   --adress-footer: #F3F7F9;
   --nav-footer: #F1F5F7;
   --another-nav-footer: #FFD180;
+  --card-border: #eaeaea;
+  --headline-card: #f9f5f0;
 }
 
 .page-body {
@@ -94,14 +96,8 @@ img {
 
 .top-header-wrapper {
   background-color: var(--header-blue);
-  color: var(--white);
-  margin: 0 auto;
-  padding: 0 10px;
-  color: var(--nav-blue);
   width: 1200px;
-  display: flex;
-  justify-content: space-around;
-  align-items: center;
+  margin: 0 auto;
 }
 
 .subtitle {
@@ -165,8 +161,6 @@ img {
 
 .main-nav {
   background-color: var(--nav-blue);
-  width: 940px;
-  margin: 0 auto;
   padding: 0 10px;
   margin-bottom: 60px;
 }
@@ -196,25 +190,27 @@ img {
 
 .offers-item:nth-child(1) {
   background-color: var(--object-yellow);
+  grid-area: materials;
 }
 
 .offers-item:nth-child(2) {
   background-color: var(--object-blue);
+  grid-area: tools;
 }
 
 .offers-item:nth-child(3) {
   background-color: var(--object-purple);
+  grid-area: technick;
 }
 
 .offers-item:nth-child(6) {
-  grid-column: 3 / 4;
   background-color: var(--object-green);
+  grid-area: sale;
 }
 
 .offers-item:nth-child(7) {
   background-color: var(--object-yellow-add);
-  grid-column: 3 / 4 ;
-  grid-row: 3 / 4;
+  grid-area: delivery;
 }
 
 .slider-header {
@@ -267,6 +263,7 @@ img {
   width: 220px;
   min-height: 145px;
   margin-bottom: 20px;
+  border: 1px solid var(--card-border);
 }
 
 .manufacturers-item:active {
@@ -293,9 +290,6 @@ img {
 
 .footer {
   background-color: var(--nav-blue);
-  width: 940px;
-  margin: 0 auto;
-  padding: 0 10px;
 }
 
 .small-footer {
@@ -411,12 +405,9 @@ img {
 }
 
 .midle-header-wraper {
-  width: 940px;
   display: flex;
   justify-content: space-between;
   align-items: center;
-  margin: 0 auto;
-  padding: 0 10px;
 }
 
 .contact-wraper {
@@ -426,12 +417,13 @@ img {
 }
 
 .main-section {
-  width: 940px;
- display: grid;
- grid-template-columns: 300px 300px 300px;
- grid-template-rows: 123px 123px 123px;
-  margin: 0 auto;
-  padding: 0 10px;
+  display: grid;
+  grid-template-columns: 1fr 1fr 1fr;
+  grid-template-rows: auto;
+  grid-template-areas:
+    "materials tools technick"
+    "slider slider sale"
+    "slider slider delivery";
   gap: 20px;
   margin-bottom: 60px;
 }
@@ -441,37 +433,27 @@ img {
 }
 
 .popular-card-wraper {
-  width: 940px;
   display: flex;
   justify-content: space-between;
   align-items: center;
-  margin: 0 auto;
-  padding: 0 10px;
+  background: var(--headline-card);
 }
 
-.popular-card {
+.popular-card-list {
   list-style: none;
-  width: 940px;
-  margin: 0 auto;
-  padding: 0 10px;
   display: flex;
   justify-content: space-between;
   margin-bottom: 70px;
 }
 
 .popular-manufacturers-wraper {
-  width: 940px;
   display: flex;
   justify-content: space-between;
   align-items: center;
-  margin: 0 auto;
-  padding: 0 10px;
+  background: var(--headline-card);
 }
 
 .manufacturers-list {
-  width: 940px;
-  margin: 0 auto;
-  padding: 0 10px;
   list-style: none;
   display: flex;
   flex-wrap: wrap;
@@ -480,18 +462,12 @@ img {
 }
 
 .services {
-  width: 940px;
   margin-bottom: 70px;
-  margin:0 auto;
-  padding: 0 10px;
 }
 
 .info-block {
-  width: 940px;
   display: flex;
   justify-content: space-between;
-  margin: 0 auto;
-  padding: 0 10px;
 }
 
 .info-slogan {
@@ -506,8 +482,8 @@ img {
   display: flex;
   flex-direction: column;
   align-items: center;
-  justify-content: space-between ;
-  width: 220px;
+  justify-content: space-between;
+  border: 1px solid var(--card-border);
 }
 
 .logo {
@@ -517,20 +493,23 @@ img {
   box-shadow: inset 0px -5px 0px rgba(0, 0, 0, 0.24);
   height: 42px;
 }
+
 input[type=search] {
   width: 270px;
   height: 42px;
 }
+
 .first-slider-container {
+  grid-area: slider;
   display: flex;
   flex-direction: column;
   align-items: flex-start;
   justify-content: space-around;
   align-items: flex-start;
   width: 620px;
-  height: 266px;
   background: url(../img/products/Puncher.jpg) no-repeat;
 }
+
 .slider-header-wraper {
   display: flex;
   flex-direction: column;
@@ -538,13 +517,15 @@ input[type=search] {
 
 .popular-sections-color {
   color: var(--nav-blue);
+  margin-left: 28px;
 }
 
 .radio-wraper {
-  display:flex;
+  display: flex;
   flex-direction: column;
   justify-content: space-between;
 }
+
 .delivery-slogan {
   width: 300px;
 }
@@ -552,6 +533,7 @@ input[type=search] {
 .guarantee-slogan {
   width: 300px;
 }
+
 .credit-slogan {
   width: 309px;
 }
@@ -569,13 +551,31 @@ input[type=search] {
 }
 
 .second-slider-container {
+  grid-area: slider;
   display: flex;
   flex-direction: column;
   align-items: flex-start;
   justify-content: space-around;
   align-items: flex-start;
   width: 620px;
-  height: 266px;
+
   background: url(../img/products/Drill.jpg) no-repeat;
+  display: none;
+}
+
+.top-header {
+  color: var(--white);
+  color: var(--nav-blue);
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+
+.content-container {
+  width: 940px;
+  margin: 0 auto;
+}
+
+.radio-slider-wraper {
   display: none;
 }
