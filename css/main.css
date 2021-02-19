@@ -127,12 +127,11 @@ img {
   width: 220px;
   height: 100%;
   align-items: center;
-  margin-left: 0px;
 }
 
 .logo::before {
   content: "";
-  width: 220px;
+  width: 100%;
   height: 5px;
   position: absolute;
   bottom: -5px;
@@ -158,7 +157,6 @@ img {
   top: 12px;
   left: 17px;
   color: var(--white);
-  opacity: 0.3;
 }
 
 .search-input {
@@ -180,7 +178,7 @@ img {
   color: #ffffff;
 }
 
-.search-input:hover+.search-icon {
+.search-input:hover + .search-icon {
   opacity: 1;
 }
 
@@ -188,9 +186,13 @@ img {
   background-color: var(--white);
 }
 
-.search-input:focus+.search-icon {
+.search-input:focus + .search-icon {
   color: var(--red);
   opacity: 1;
+}
+
+.search-input:not(.search-input:focus) {
+  color: var(--white);
 }
 
 .bookmarks {
@@ -282,6 +284,7 @@ img {
   display: flex;
   align-items: flex-start;
   margin-top: 40px;
+  justify-content: space-between;
 }
 
 .subtitle {
@@ -290,7 +293,6 @@ img {
   line-height: 23px;
   color: var(--red);
   width: 198px;
-  margin-right: 92px;
   margin-top: 0;
 }
 
@@ -299,7 +301,6 @@ img {
   flex-direction: column;
   justify-content: center;
   align-items: center;
-  margin-right: 68px;
 }
 
 .header-phone {
@@ -333,7 +334,6 @@ img {
 
 .sign-in-up-wraper {
   display: flex;
-  flex-wrap: wrap;
 }
 
 .sign-in {
@@ -344,7 +344,6 @@ img {
   padding: 12px 27px 12px 48px;
   background-color: var(--white);
   margin-right: 10px;
-  margin-left: 22px;
 }
 
 .sign-in-icon {
