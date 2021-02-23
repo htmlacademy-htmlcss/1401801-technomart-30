@@ -592,14 +592,6 @@ img {
 
 .slider-radio-wraper {
   position: absolute;
-  list-style: none;
-  bottom: 36px;
-  left: 295px;
-}
-
-.circles {
-  list-style: none;
-  position: absolute;
   bottom: 36px;
   left: 295px;
 }
@@ -614,6 +606,15 @@ img {
   border-radius: 50%;
 }
 
+.filter-input-radio:checked + .radio-1::after {
+  content: "";
+  position: absolute;
+  width: 6px;
+  height: 6px;
+  background-color: var(--red);
+  border-radius: 50%;
+}
+
 .second-slider-container {
   display: none;
   flex-direction: column;
@@ -622,6 +623,26 @@ img {
   width: 620px;
   height: 100%;
   background: url(../img/products/Drill.jpg) no-repeat;
+}
+
+.arrow-left + .left-icon::before {
+  content: "";
+  position: absolute;
+  width: 22px;
+  height: 40px;
+  top: 114px;
+  left: 24px;
+  background: url(../img/icons/left.svg) no-repeat 0 0;
+}
+
+.arrow-right + .right-icon::before {
+  content: "";
+  position: absolute;
+  width: 22px;
+  height: 40px;
+  top: 114px;
+  right: 20px;
+  background: url(../img/icons/right.svg) no-repeat 0 0;
 }
 
 .current {

@@ -83,30 +83,34 @@
         <h3 class="offers-title">Техника</h3>
         <a href="#" class="offers-link">Для стройки</a>
       </div>
-      <ul class="slider-list">
-        <li class="first-slider-container current">
+      <div class="slider-list">
+        <div class="first-slider-container current ">
           <div class="slider-header-wraper">
             <span class="slider-header">Перфораторы</span>
             <span class="slider-slogan">Настоящие мужские игрушки</span>
           </div>
           <a href="catalog.html" class="button slider-button">Открыть каталог</a>
-        </li>
-        <li class="second-slider-container">
+        </div>
+        <div class="second-slider-container ">
           <div class="slider-header-wraper">
             <span class="slider-header">Дрели</span>
             <span class="slider-slogan">Соседям на радость!</span>
           </div>
           <a href="catalog.html" class="button slider-button">Открыть каталог</a>
-        </li>
-        <li class="slider-radio-wraper visually-hidden">
-          <input type="radio" id="b1" name="slide" checked>
-          <input type="radio" id="b2" name="slide">
-        </li>
-        <li class="circles">
+        </div>
+        <div class="slider-radio-wraper">
+          <input class="visually-hidden filter-input-radio" type="radio" id="b1" name="slide" checked>
           <label class="radio-1" for="b1"></label>
+          <input class="visually-hidden filter-input-radio" type="radio" id="b2" name="slide">
           <label class="radio-1" for="b2"></label>
-        </li>
-      </ul>
+        </div>
+        <div>
+          <button type="button" class="arrow-left visually-hidden" id="left"></button>
+          <label class="left-icon" for="left"></label>
+          <button type="button" class="arrow-right visually-hidden" id="right"></button>
+          <label class="right-icon" for="right"></label>
+        </div>
+      </div>
       <div class="offers-item">
         <h3 class="offers-title">Скидки 50%</h3>
         <a href="#" class="offers-link">На 350 товаров</a>
