@@ -426,97 +426,99 @@ img {
 }
 
 .offers-item {
-  width: 300px;
+  position: relative;
+  padding-left: 22px;
+  padding-top: 20px;
+  padding-bottom: 21px;
+}
+
+.offers-item::before {
+  position: absolute;
+  content: "";
+  background: no-repeat 0 0;
 }
 
 .offers-item:nth-child(1) {
   background-color: var(--object-yellow);
   grid-area: materials;
-  position: relative;
 }
 
 .offers-item:nth-child(1)::before {
-  content: "";
-  position: absolute;
   width: 44px;
   height: 65px;
   top: 32px;
   left: 213px;
-  background: url(../img/icons/object-icon-1.svg) no-repeat 0 0;
+  background-image: url(../img/icons/object-icon-1.svg);
 }
 
-.offers-item:nth-child(1)::after {
-  content: "";
-  position: absolute;
+/* .offers-item:nth-child(1)::after {
   width: 70px;
   height: 70px;
   left: 230px;
   bottom: 53px;
   background: url(../img/icons/new.svg) no-repeat 0 0;
-}
+} */
 
 .offers-item:nth-child(2) {
   background-color: var(--object-blue);
   grid-area: tools;
-  position: relative;
 }
 
 .offers-item:nth-child(2)::before {
-  content: "";
-  position: absolute;
   width: 75px;
   height: 61px;
   top: 34px;
   left: 194px;
-  background: url(../img/icons/object-icon-2.svg) no-repeat 0 0;
+  background-image: url(../img/icons/object-icon-2.svg);
 }
 
 .offers-item:nth-child(3) {
   background-color: var(--object-purple);
   grid-area: technic;
-  position: relative;
 }
 
 .offers-item:nth-child(3)::before {
-  content: "";
-  position: absolute;
   width: 78px;
   height: 62px;
   top: 31px;
   left: 191px;
-  background: url(../img/icons/object-icon-3.svg) no-repeat 0 0;
+  background-image: url(../img/icons/object-icon-3.svg);
 }
 
 .offers-item:nth-child(5) {
   background-color: var(--object-green);
   grid-area: sale;
-  position: relative;
 }
 
 .offers-item:nth-child(5)::before {
-  content: "";
-  position: absolute;
   width: 59px;
   height: 72px;
   top: 26px;
   left: 196px;
-  background: url(../img/icons/object-icon-4.svg) no-repeat 0 0;
+  background-image: url(../img/icons/object-icon-4.svg);
 }
 
 .offers-item:nth-child(6) {
   background-color: var(--object-yellow-add);
   grid-area: delivery;
-  position: relative;
 }
 
 .offers-item:nth-child(6)::before {
-  content: "";
-  position: absolute;
   width: 78px;
   height: 63px;
   top: 32px;
   left: 191px;
-  background: url(../img/icons/object-icon-5.svg) no-repeat 0 0;
+  background-image: url(../img/icons/object-icon-5.svg);
+}
+
+.new-icon::after {
+  position: absolute;
+  content: "";
+  width: 70px;
+  height: 70px;
+  top: 0;
+  right: 0;
+  background: url(../img/icons/new.svg) no-repeat 0 0;
 }
 
 .offers-title {
@@ -524,9 +526,8 @@ img {
   font-size: 24px;
   line-height: 30px;
   font-weight: 700;
-  padding-left: 22px;
-  margin-bottom: 14px;
-  margin-top: 20px;
+  padding-bottom: 14px;
+  margin: 0;
 }
 
 .offers-link {
@@ -534,11 +535,8 @@ img {
   line-height: 18px;
   display: flex;
   width: 135px;
-  flex-wrap: wrap;
   justify-content: center;
   align-items: center;
-  margin-left: 22px;
-  margin-bottom: 21px;
   text-transform: uppercase;
   padding-top: 10px;
   padding-bottom: 10px;
@@ -568,8 +566,8 @@ img {
 .slider-header-wraper {
   display: flex;
   flex-direction: column;
-  margin-top: 23px;
-  margin-left: 24px;
+  padding-top: 23px;
+  padding-left: 24px
 }
 
 .slider-list {
@@ -585,7 +583,6 @@ img {
   flex-direction: column;
   align-items: flex-start;
   justify-content: space-between;
-  width: 620px;
   height: 100%;
   background: url(../img/products/Puncher.jpg) no-repeat;
 }
@@ -625,23 +622,46 @@ img {
   background: url(../img/products/Drill.jpg) no-repeat;
 }
 
-.arrow-left + .left-icon::before {
-  content: "";
+.arrow-left {
   position: absolute;
-  width: 22px;
-  height: 40px;
+  width: 24px;
+  height: 44px;
   top: 114px;
   left: 24px;
-  background: url(../img/icons/left.svg) no-repeat 0 0;
+  background-color: transparent;
+  border: none;
+  outline: none;
 }
 
-.arrow-right + .right-icon::before {
+.arrow-left::before {
   content: "";
   position: absolute;
   width: 22px;
   height: 40px;
+  top: 0px;
+  left: 0px;
+  background: url(../img/icons/left.svg) no-repeat 0 0;
+  opacity: 1;
+}
+
+.arrow-right {
+  position: absolute;
+  width: 24px;
+  height: 44px;
   top: 114px;
   right: 20px;
+  background-color: transparent;
+  border: none;
+  outline: none;
+}
+
+.arrow-right::before {
+  content: "";
+  position: absolute;
+  width: 22px;
+  height: 40px;
+  top: 0;
+  right: 0;
   background: url(../img/icons/right.svg) no-repeat 0 0;
 }
 
