@@ -563,7 +563,7 @@ img {
   grid-area: slider;
 }
 
-.first-slider-container {
+.slider {
   padding: 24px;
   grid-area: slider;
   display: none;
@@ -571,8 +571,11 @@ img {
   align-items: flex-start;
   justify-content: space-between;
   height: 100%;
-  background: url(../img/products/Puncher.jpg) no-repeat;
   box-sizing: border-box;
+}
+
+.first-slider-container {
+  background: url(../img/products/Puncher.jpg) no-repeat;
 }
 
 .slider-radio-wraper {
@@ -601,25 +604,21 @@ img {
 }
 
 .second-slider-container {
-  padding: 24px;
-  display: none;
-  flex-direction: column;
-  justify-content: space-between;
-  align-items: flex-start;
-  height: 100%;
   background: url(../img/products/Drill.jpg) no-repeat;
-  box-sizing: border-box;
 }
-
-.arrow-left {
+.arrow {
   position: absolute;
   width: 24px;
   height: 44px;
   top: 114px;
-  left: 24px;
   background-color: transparent;
   border: none;
   outline: none;
+  cursor: pointer;
+}
+
+.arrow-left {
+  left: 24px;
 }
 
 .arrow-left::before {
@@ -629,19 +628,11 @@ img {
   height: 40px;
   top: 0px;
   left: 0px;
-  background: url(../img/icons/left.svg) no-repeat 0 0;
-  opacity: 1;
+  background: url(../img/icons/slider-arrow.svg) no-repeat 0 0;
 }
 
 .arrow-right {
-  position: absolute;
-  width: 24px;
-  height: 44px;
-  top: 114px;
   right: 20px;
-  background-color: transparent;
-  border: none;
-  outline: none;
 }
 
 .arrow-right::before {
@@ -651,7 +642,8 @@ img {
   height: 40px;
   top: 0;
   right: 0;
-  background: url(../img/icons/right.svg) no-repeat 0 0;
+  background: url(../img/icons/slider-arrow.svg) no-repeat 0 0;
+  transform: rotate(180deg);
 }
 
 .current {
