@@ -614,6 +614,7 @@ img {
   background-color: transparent;
   border: none;
   outline: none;
+  cursor: pointer;
 }
 
 .arrow-left {
@@ -627,7 +628,7 @@ img {
   height: 40px;
   top: 0px;
   left: 0px;
-  background: url(../img/icons/left.svg) no-repeat 0 0;
+  background: url(../img/icons/slider-arrow.svg) no-repeat 0 0;
 }
 
 .arrow-right {
@@ -641,7 +642,7 @@ img {
   height: 40px;
   top: 0;
   right: 0;
-  background: url(../img/icons/left.svg) no-repeat 0 0;
+  background: url(../img/icons/slider-arrow.svg) no-repeat 0 0;
   transform: rotate(180deg);
 }
 
