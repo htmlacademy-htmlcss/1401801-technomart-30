@@ -730,7 +730,7 @@ img {
   margin-right: 20px;
 }
 
-.popular-card-item:last-child {
+.popular-card-item:nth-child(4n) {
   margin-right: 0;
 }
 
@@ -860,7 +860,6 @@ img {
   list-style: none;
   display: flex;
   flex-wrap: wrap;
-  justify-content: space-between;
   margin: 0;
   margin-bottom: 70px;
   padding: 0;
@@ -870,10 +869,15 @@ img {
   display: flex;
   justify-content: center;
   align-items: center;
-  width: 220px;
+  width: 218px;
   min-height: 145px;
   margin-bottom: 20px;
   border: 1px solid var(--card-border);
+  margin-right: 20px;
+}
+
+.manufacturers-item:nth-child(4n) {
+  margin-right: 0;
 }
 
 .manufacturers-item:hover {
