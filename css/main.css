@@ -114,6 +114,16 @@ img {
   margin: 0 auto;
 }
 
+.button {
+  font-size: 14px;
+  line-height: 18px;
+  color: var(--white);
+  background-color: var(--red);
+  text-transform: uppercase;
+  padding-top: 10px;
+  padding-bottom: 10px;
+}
+
 .top-header-wrapper {
   background-color: var(--header-blue);
 }
@@ -861,7 +871,6 @@ img {
   display: flex;
   flex-wrap: wrap;
   margin: 0;
-  margin-bottom: 70px;
   padding: 0;
 }
 
@@ -886,6 +895,167 @@ img {
 
 .manufacturers-item:active {
   opacity: 50%;
+}
+
+.services-wraper {
+  margin-bottom: 70px;
+  background-color: var(--nav-footer);
+  margin-top: 50px;
+  padding-top: 64px;
+  padding-bottom: 112px;
+}
+
+.wrapper-for-services-position {
+  position: relative;
+}
+
+.services-headline {
+  padding-bottom: 24px;
+}
+
+.service-caption {
+  color: var(--nav-blue);
+  font-size: 30px;
+  line-height: 30px;
+  margin: 0;
+  padding-bottom: 30px;
+}
+
+.slider-title {
+  font-weight: 700;
+  font-size: 21px;
+  line-height: 30px;
+}
+
+.slogan {
+  font-family: "PT Sans", "Arial", sans-serif;
+  font-size: 13px;
+  line-height: 24px;
+}
+
+.services-slogan {
+  width: 394px;
+  margin: 0;
+  padding-bottom: 70px;
+}
+
+.radio-wraper {
+  position: relative;
+  width: 240px;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+}
+
+.radio-wraper::before {
+  content: "";
+  position: absolute;
+  width: 10px;
+  right: 0;
+  top: -50px;
+  height: 279px;
+  background: url(../img/icons/thing.png) no-repeat 0 0;
+}
+
+.services-slider-btn {
+  display: block;
+  padding: 14px 140px 18px 22px;
+  background-color: var(--nav-blue);
+  color: var(--white);
+  box-shadow: 0px 1px 0px #293449, inset 0px 1px 0px #405069;
+}
+
+.services-radio:checked + .services-slider-btn {
+  background-color: var(--white);
+  color: var(--nav-blue);
+  box-shadow: 0px 1px 0px #FFFFFF;
+}
+
+.services-radio-first:checked + .slide-first {
+  display: block;
+}
+
+.services-radio-second:checked + .slide-second {
+  display: block;
+}
+
+.services-radio-third:checked + .slide-third {
+  display: block;
+}
+
+.slide {
+  position: absolute;
+  width: 620px;
+  height: 286px;
+  bottom: -110px;
+  right: 0px;
+}
+
+.slide-first {
+  display: block;
+}
+
+.slide-first::before {
+  content: "";
+  position: absolute;
+  width: 468px;
+  height: 261px;
+  top: 21px;
+  right: 0;
+  background: url(../img/icons/delivery.png) no-repeat 0 0;
+}
+
+.slide-second {
+ display: none;
+}
+
+.slide-second::before {
+  content: "";
+  position: absolute;
+  width: 389px;
+  height: 283px;
+  top: 0;
+  right: 0;
+  background: url(../img/icons/gurantee.png) no-repeat 0 0;
+}
+
+.slide-third {
+  display: none;
+}
+
+.slide-third::before {
+  content: "";
+  position: absolute;
+  width: 465px;
+  height: 285px;
+  top: 0;
+  right: 0;
+  background: url(../img/icons/credit.png) no-repeat 0 0;
+}
+
+
+.credit-btn {
+  padding-left: 38px;
+  padding-right: 38px;
+  margin-bottom: 85p;
+}
+
+
+.services-slider-slogan {
+  width: 300px;
+  margin: 0;
+}
+.delivery-slogan {
+  padding-bottom: 70px;
+}
+
+.gurantee-slogan {
+  width: 331px;
+}
+
+.credit-slogan {
+  width: 278px;
+  padding-bottom: 26px;
 }
 
 .user-wraper {
@@ -1000,56 +1170,6 @@ img {
   text-decoration: none;
 }
 
-.button {
-  font-size: 14px;
-  line-height: 18px;
-  color: var(--white);
-  background-color: var(--red);
-  text-transform: uppercase;
-  padding-top: 10px;
-  padding-bottom: 10px;
-}
-
-.slogan {
-  font-family: "PT Sans", "Arial", sans-serif;
-  font-size: 13px;
-  line-height: 24px;
-}
-
-.services-wraper {
-  margin-bottom: 70px;
-  background-color: var(--nav-footer);
-  margin-top: 70px;
-}
-
-.slider-title {
-  font-weight: 700;
-  font-size: 21px;
-  line-height: 30px;
-}
-
-.radio-wraper {
-  display: flex;
-  flex-direction: column;
-  justify-content: space-between;
-}
-
-.delivery-slogan {
-  width: 300px;
-}
-
-.guarantee-slogan {
-  width: 300px;
-}
-
-.credit-slogan {
-  width: 309px;
-}
-
-.services-slogan {
-  width: 394px;
-}
-
 .contact-section-wraper {
   width: 300px;
 }
@@ -1067,12 +1187,6 @@ img {
   font-family: "PT Sans", "Arial", sans-serif;
   font-size: 13px;
   line-height: 24px;
-}
-
-.service-caption {
-  color: var(--nav-blue);
-  font-size: 30px;
-  line-height: 30px;
 }
 
 .footer-wraper {
