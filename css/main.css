@@ -294,7 +294,7 @@ img {
   color: rgba(255, 255, 255, 0.5);
 }
 
-.midle-header-wraper {
+.midle-header-wrapper {
   display: flex;
   align-items: flex-start;
   margin-top: 40px;
@@ -310,7 +310,7 @@ img {
   margin-top: 0;
 }
 
-.contact-wraper {
+.contact-wrapper {
   display: flex;
   flex-direction: column;
   justify-content: center;
@@ -346,7 +346,7 @@ img {
   color: var(--nav-blue);
 }
 
-.sign-in-up-wraper {
+.sign-in-up-wrapper {
   display: flex;
 }
 
@@ -566,7 +566,7 @@ img {
   text-transform: uppercase;
 }
 
-.slider-header-wraper {
+.slider-header-wrapper {
   display: flex;
   flex-direction: column;
 }
@@ -591,7 +591,7 @@ img {
   background: url(../img/products/Puncher.jpg) no-repeat;
 }
 
-.slider-radio-wraper {
+.slider-radio-wrapper {
   position: absolute;
   bottom: 36px;
   left: 295px;
@@ -692,7 +692,7 @@ img {
   overflow: hidden;
 }
 
-.popular-card-wraper {
+.popular-card-wrapper {
   display: flex;
   justify-content: space-between;
   align-items: center;
@@ -852,7 +852,7 @@ img {
   opacity: 0.5;
 }
 
-.popular-manufacturers-wraper {
+.popular-manufacturers-wrapper {
   display: flex;
   justify-content: space-between;
   align-items: center;
@@ -897,7 +897,7 @@ img {
   opacity: 50%;
 }
 
-.services-wraper {
+.services-wrapper {
   background-color: var(--nav-footer);
   margin-top: 50px;
   padding-top: 64px;
@@ -1046,7 +1046,7 @@ img {
   padding: 70px 0 70px 0;
 }
 
-.company-wraper {
+.company-wrapper {
   max-width: 460px;
 }
 
@@ -1104,7 +1104,7 @@ img {
  padding-right: 40px;
 }
 
-.contact-section-wraper {
+.contact-section-wrapper {
   max-width: 300px;
 }
 
@@ -1125,7 +1125,7 @@ img {
   white-space: nowrap;
 }
 
-.user-wraper {
+.user-wrapper {
   width: 300px;
   display: flex;
   flex-wrap: wrap;
@@ -1183,7 +1183,7 @@ img {
   display: inline;
 }
 
-.headline-wraper {
+.headline-wrapper {
   grid-column: 1 / -1;
   background: var(--nav-footer);
   display: flex;
@@ -1198,7 +1198,7 @@ img {
   font-family: "PT Sans", "Arial", sans-serif;
 }
 
-.catalog-filter-wraper {
+.catalog-filter-wrapper {
   margin: 0;
   list-style: none;
   display: flex;
@@ -1237,7 +1237,7 @@ img {
   text-decoration: none;
 }
 
-.footer-wraper {
+.footer-wrapper {
   background-color: var(--nav-blue);
 }
 
@@ -1245,7 +1245,7 @@ img {
   display: flex;
 }
 
-.small-footer-wraper {
+.small-footer-wrapper {
   background-color: var(--header-blue);
 }
 
