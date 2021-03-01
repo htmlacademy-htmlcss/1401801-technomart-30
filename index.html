@@ -267,7 +267,7 @@
         <p class="info-slogan contact-slogan">Вы можете забрать товар сами,
           заехав в наш офис:</p>
         <a href="#" class="map-link">
-          <img src="/img/picturers/map.png" alt="Карта" width="300" height="158">
+          <img src="img/picturers/map.png" alt="Карта" width="300" height="158">
         </a>
         <a href="#" class="button contact-btn">Заблудились? напишите нам! </a>
       </section>
@@ -317,6 +317,33 @@
       </div>
     </div>
   </footer>
+  <section class="modal-map">
+    <iframe class="map-container"
+      src="https://www.google.com/maps/embed?pb=!1m14!1m8!1m3!1d15992.12005563134!2d30.31164604518958!3d59.93189315331471!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x4696310fca5ba729%3A0xea9c53d4493c879f!2z0JHQvtC70YzRiNCw0Y8g0JrQvtC90Y7RiNC10L3QvdCw0Y8g0YPQuy4sIDE5LCDQodCw0L3QutGCLdCf0LXRgtC10YDQsdGD0YDQsywgMTkxMTg2!5e0!3m2!1sru!2sru!4v1614602751479!5m2!1sru!2sru"
+      width="940" height="425" allowfullscreen="" title="Место расположение Техномарта"></iframe>
+    <button class="modal-close" aria-label="Закрыть"></button>
+  </section>
+  <form class="modal-feedback">
+    <button class="modal-close modal-close-feedback"></button>
+    <div class="modal-feedback-form">
+      <div class="top-feedback-form">
+        <div class="feedback-form">
+          <label for="name">Ваше имя:</label>
+          <input class="form-border form-place" type="text" id="name" name="name" placeholder="Имя Фамилия" required>
+        </div>
+        <div class="feedback-form">
+          <label for="email">Ваш e-mail</label>
+          <input class="form-border form-place" type="text" id="email" name="e-mail" placeholder="email@example.com"
+            required>
+        </div>
+      </div>
+      <label for="text-letter">Текст письма:</label>
+      <textarea class="letter form-border" name="letter" id="text-letter" placeholder="В свободной форме"></textarea>
+    </div>
+    <div class="send-area">
+      <button class="button feedback-btn" class="button" type="submit">Отправить</button>
+    </div>
+  </form>
 </body>
 
 </html>
