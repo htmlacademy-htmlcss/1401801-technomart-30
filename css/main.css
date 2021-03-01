@@ -1426,6 +1426,7 @@ img {
   width: 620px;
   filter: drop-shadow(0px 20px 40px rgba(0, 0, 0, 0.75));
   box-sizing: border-box;
+  box-shadow: 0 0 10px var(--card-shadow);
 }
 
 .modal-feedback::before {
@@ -1468,10 +1469,7 @@ img {
 }
 
 .send-area {
-  display: flex;
-  justify-content: center;
-  align-items: center;
-  min-height: 112px;
+  padding: 37px 80px 37px 80px;
   background-color: var(--modal-btn-color);
 }
 
