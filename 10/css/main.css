@@ -81,6 +81,7 @@
   --object-btn-hover: rgba(197, 197, 197, 0.3);
   --object-btn-active: rgba(169, 169, 169, 0.3);
   --card-shadow: #aeb2ba;
+  --modal-btn-color: #F4F4F4;
 }
 
 .page-body {
@@ -1040,6 +1041,7 @@ img {
 .current-slide {
   display: block;
 }
+
 .info-block {
   display: flex;
   justify-content: space-between;
@@ -1064,13 +1066,13 @@ img {
 }
 
 .transport-company-list {
-  position: relative;
-  list-style: none;
   margin: 0;
   margin-bottom: 20px;
+  list-style: none;
 }
 
 .transport-company-item {
+  position: relative;
   margin-bottom: 12px;
 }
 
@@ -1083,25 +1085,15 @@ img {
   position: absolute;
   width: 25px;
   height: 2px;
-  left: 3px;
+  top: 12px;
+  left: -37px;
   background-color: var(--red);
 }
 
-.transport-company-item:nth-child(1):before {
-  top: 12px;
-}
-.transport-company-item:nth-child(2):before {
-  top: 46px;
-}
-
-.transport-company-item:nth-child(3):before {
-  bottom: 12px;
-}
-
 .about-company-btn {
- display: inline-block;
- padding-left: 40px;
- padding-right: 40px;
+  display: inline-block;
+  padding-left: 40px;
+  padding-right: 40px;
 }
 
 .contact-section-wrapper {
@@ -1372,4 +1364,120 @@ img {
 
 .pagination-item a {
   color: var(--black);
+}
+
+.modal-map {
+  display: none;
+  position: fixed;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  width: 940px;
+  height: 425px;
+  box-shadow: 0 0 20px var(--card-shadow);
+}
+
+.map-container {
+  border: none;
+}
+
+.modal-map::before {
+  position: absolute;
+  content: "";
+  width: 940px;
+  height: 7px;
+  background: url(../img/icons/map-red-bar.svg) no-repeat 0 0;
+}
+
+.modal-close {
+  position: absolute;
+  top: 16px;
+  right: 10px;
+  width: 21px;
+  height: 21px;
+  background-color: transparent;
+  border: 0;
+  outline: 0;
+  cursor: pointer;
+}
+
+.modal-close::before {
+  content: "";
+  position: absolute;
+  width: 21px;
+  height: 21px;
+  top: 0;
+  right: 0;
+  background: url(../img/icons/close.svg) no-repeat 0 0;
+}
+
+.modal-close-feedback {
+  top: 21px;
+  right: 11px;
+}
+
+.modal-feedback {
+  display: none;
+  background-color: var(--white);
+  position: fixed;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  width: 620px;
+  filter: drop-shadow(0px 20px 40px rgba(0, 0, 0, 0.75));
+  box-sizing: border-box;
+  box-shadow: 0 0 10px var(--card-shadow);
+}
+
+.modal-feedback::before {
+  content: "";
+  position: absolute;
+  width: 620px;
+  height: 7px;
+  background: url(../img/icons/map-red-bar.svg) no-repeat 0 0;
+}
+
+.modal-feedback-form {
+  padding: 38px 80px 0 80px;
+}
+
+.form-border {
+  border: 2px solid var(--basic-greylight);
+  border-radius: 2px;
+  box-sizing: border-box;
+}
+
+.top-feedback-form {
+  display: flex;
+  justify-content: space-between;
+}
+
+.feedback-form {
+  width: 220px;
+  margin-bottom: 20px;
+}
+
+.form-place {
+  height: 38px;
+  width: 220px;
+}
+
+.letter {
+  width: 460px;
+  margin-bottom: 36px;
+  height: 114px;
+}
+
+.send-area {
+  padding: 37px 80px 37px 80px;
+  background-color: var(--modal-btn-color);
+}
+
+.feedback-btn {
+  width: 460px;
+  border: none;
+}
+
+.feedback-btn:focus {
+  outline: none;
 }
