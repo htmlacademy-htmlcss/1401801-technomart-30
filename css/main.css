@@ -1417,16 +1417,16 @@ img {
 }
 
 .modal-feedback {
-  display: none;
+  display: block;
   background-color: var(--white);
   position: fixed;
   top: 50%;
   left: 50%;
   transform: translate(-50%, -50%);
   width: 620px;
-  filter: drop-shadow(0px 20px 40px rgba(0, 0, 0, 0.75));
   box-sizing: border-box;
-  box-shadow: 0 0 10px var(--card-shadow);
+  box-shadow: 0 0 10px var(--black);
+  padding: 40px 80px 37px 80px;
 }
 
 .modal-feedback::before {
@@ -1434,11 +1434,9 @@ img {
   position: absolute;
   width: 620px;
   height: 7px;
+  top: 0;
+  left: 0;
   background: url(../img/icons/map-red-bar.svg) no-repeat 0 0;
-}
-
-.modal-feedback-form {
-  padding: 38px 80px 0 80px;
 }
 
 .form-border {
@@ -1447,12 +1445,12 @@ img {
   box-sizing: border-box;
 }
 
-.top-feedback-form {
+.top-feedback-wrapper {
   display: flex;
   justify-content: space-between;
 }
 
-.feedback-form {
+.feedback-field {
   width: 220px;
   margin-bottom: 20px;
 }
@@ -1468,14 +1466,22 @@ img {
   height: 114px;
 }
 
-.send-area {
-  padding: 37px 80px 37px 80px;
-  background-color: var(--modal-btn-color);
-}
-
 .feedback-btn {
+  position: relative;
   width: 460px;
   border: none;
+  margin-top: 37px;
+}
+
+.feedback-btn::before {
+  content: "";
+  position: absolute;
+  width: 620px;
+  height: 112px;
+  left: -80px;
+  top: -37px;
+  background-color: var(--modal-btn-color);
+  z-index: -1;
 }
 
 .feedback-btn:focus {
