@@ -1130,6 +1130,7 @@ img {
 .logo-footer-adress-wrapper {
   display: flex;
   flex-direction: column;
+  width: 320px;;
 }
 
 .footer-logo {
@@ -1138,24 +1139,28 @@ img {
 }
 
 .footer-adress {
-  width: 321px;
   color: var(--white);
-  min-height: 49px;
   margin: 0;
   margin-top: 22px;
-  margin-bottom: 54px;
+  margin-bottom: 56px;
 }
 
 .footer-nav-wrapper {
   padding-top: 36px;
   padding-bottom: 74px;
-  width: 546px;
 }
 
 .top-navigation {
-  justify-content: space-between;
   margin: 0;
   padding: 0;
+}
+
+.footer-nav-item {
+  margin-right: 58px;
+}
+
+.footer-nav-item:last-child {
+  margin-right: 0;
 }
 
 .footer-nav-item:hover {
@@ -1168,16 +1173,13 @@ img {
 }
 
 .bottom-navigation {
-  padding-left: 30px;
-  justify-content: space-between;
   margin: 0;
   margin-top: 34px;
 }
 
-.bottom-navigation a {
+.bottom-navigation-link {
   color: var(--another-nav-footer);
 }
-
 
 .small-footer-wraper {
   background-color: var(--header-blue);
@@ -1185,7 +1187,6 @@ img {
 
 .small-footer-content {
   display: flex;
-  justify-content: space-between;
   padding-top: 36px;
   padding-bottom: 36px;
 }
@@ -1200,9 +1201,12 @@ img {
 
 .socials {
   list-style: none;
-  width: 130px;
   display: flex;
   justify-content: space-between;
+  margin: 0;
+  margin-left: auto;
+  margin-right: auto;
+  padding: 0;
 }
 
 .socials-button {
@@ -1244,6 +1248,10 @@ img {
 .feedback-link {
   display: flex;
   flex-direction: column;
+}
+
+.feedback-wrapper {
+  margin-right: 50px;
 }
 
 .footer-feedback {
