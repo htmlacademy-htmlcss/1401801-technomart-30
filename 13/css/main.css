@@ -88,6 +88,7 @@
   --bar-color: #00ca74;
   --toggle-color: #ababab;
   --toggle-shadow: #cfcfcf;
+  --btn-disabled: #B5B5B5;
 }
 
 .page-body {
@@ -1389,12 +1390,13 @@ img {
   display: flex;
   flex-wrap: wrap;
   align-items: center;
-  padding: 20px 20px 20px 0;
+  padding: 20px 0 20px 0;
   margin: 0;
 
 }
 
 .breadcrumbs-item {
+  font-family: "PT Sans", "Arial", sa;
   position: relative;
   font-size: 13px;
   line-height: 18px;
@@ -1446,7 +1448,7 @@ img {
   justify-content: space-between;
   margin-bottom: 20px;
   text-transform: uppercase;
-  padding: 30px 0 30px 30px;
+  padding: 30px;
 }
 
 .catalog-headline {
@@ -1595,6 +1597,10 @@ img {
   margin-bottom: 0;
 }
 
+.manufacturers-label {
+  cursor: pointer;
+}
+
 .filter-checkbox + .manufacturers-label::before {
   content: "";
   position: absolute;
@@ -1602,6 +1608,7 @@ img {
   height: 23px;
   left: 0;
   background: url(../img/icons/checkbox-off.svg) no-repeat 0 0;
+  opacity: 0.8;
 }
 
 .filter-checkbox:checked + .manufacturers-label::after {
@@ -1611,6 +1618,38 @@ img {
   height: 23px;
   left: 0;
   background: url(../img/icons/checkbox-on.svg) no-repeat 0 0;
+  opacity: 0.8;
+}
+
+.filter-checkbox:checked + .manufacturers-label::before {
+  opacity: 0;
+}
+
+.filter-checkbox:hover + .manufacturers-label::before {
+  opacity: 1;
+}
+
+.filter-checkbox:hover:checked + .manufacturers-label::after {
+  opacity: 1;
+}
+.filter-checkbox:hover:checked + .manufacturers-label::before {
+  opacity: 0;
+}
+
+.filter-checkbox:disabled + .manufacturers-label::before {
+  opacity: 0.4;
+}
+
+.filter-checkbox:disabled + .manufacturers-label {
+  opacity: 0.4;
+}
+
+.filter-checkbox:checked:disabled + .manufacturers-label::after {
+  opacity: 0.4;
+}
+
+.filter-checkbox:checked:disabled + .manufacturers-label::before {
+  opacity: 0;
 }
 
 .filter-power {
@@ -1625,6 +1664,14 @@ img {
   margin-bottom: 24px;
 }
 
+.power-filter-item:last-child {
+  margin-bottom: 0;
+}
+
+.power-label {
+  cursor: pointer;
+}
+
 .filter-radio + .power-label::before {
   position: absolute;
   content: "";
@@ -1632,6 +1679,7 @@ img {
   height: 25px;
   left: 0;
   background: url(../img/icons/radio-off.svg) no-repeat 0 0;
+  opacity: 0.8;
 }
 
 .filter-radio:checked + .power-label::after {
@@ -1641,6 +1689,38 @@ img {
   height: 25px;
   left: 0;
   background: url(../img/icons/radio-on.svg) no-repeat 0 0;
+  opacity: 0.8;
+}
+
+.filter-radio:checked + .power-label::before {
+ opacity: 0;
+}
+
+.filter-radio:hover + .power-label::before {
+  opacity: 1;
+}
+
+.filter-radio:hover:checked + .power-label::after {
+  opacity: 1;
+}
+.filter-radio:hover:checked + .power-label::before {
+  opacity: 0;
+}
+
+.filter-radio:disabled + .power-label::before {
+  opacity: 0.4;
+}
+
+.filter-radio:disabled + .power-label {
+  opacity: 0.4;
+}
+
+.filter-radio:checked:disabled + .power-label::after {
+  opacity: 0.4;
+}
+
+.filter-radio:checked:disabled + .power-label::before {
+  opacity: 0;
 }
 
 .filter-btn {
@@ -1649,6 +1729,7 @@ img {
  padding-bottom: 10px;
  background-color: var(--white);
  border: 1px solid var(--border-btn);
+ cursor: pointer;
 }
 
 .catalog-list {
@@ -1662,8 +1743,14 @@ img {
   list-style: none;
   display: flex;
   background: var(--catalog-headline);
-  justify-content: space-between;
   text-transform: uppercase;
+}
+
+.catalog-filter-item:first-child {
+  margin-right: 140px;
+}
+.catalog-filter-item {
+  margin-right: 58px;
 }
 
 .catalog-filter {
@@ -1672,22 +1759,16 @@ img {
   font-family: "PT Sans", "Arial", sans-serif;
 }
 
-.sort-style {
+.sort-style:not(.activated) {
   text-decoration: underline dotted var(--red);
   color: var(--black);
   opacity: 0.3;
 }
 
-.sort-style:hover {
+.sort-style:hover:not(.activated) {
   color: var(--black);
   text-decoration: underline var(--red);
   opacity: 1;
-}
-
-.sort-style:active {
-  color: var(--red);
-  opacity: 1;
-  text-decoration: none;
 }
 
 .triangle-arrow-wrapper {
@@ -1697,7 +1778,7 @@ img {
   justify-content: space-between;
 }
 
-.triangle-arrow {
+.triangle-arrow:not(.activated) {
   color: var(--basic-greylight);
 }
 
@@ -1705,12 +1786,15 @@ img {
   color: var(--black);
 }
 
-.triangle-arrow:active {
-  color: var(--red);
-}
-
 .triangle-arrow-right {
   transform: rotate(180deg);
+}
+
+.activated {
+  color: var(--red);
+  opacity: 1;
+  text-decoration: none;
+  cursor:default;
 }
 
 .puncher-description {
