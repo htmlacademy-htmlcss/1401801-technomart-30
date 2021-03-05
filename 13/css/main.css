@@ -1747,7 +1747,7 @@ img {
 }
 
 .catalog-filter-item:first-child {
-  margin-right: 140px;
+  margin-right: auto;
 }
 .catalog-filter-item {
   margin-right: 58px;
@@ -1782,7 +1782,7 @@ img {
   color: var(--basic-greylight);
 }
 
-.triangle-arrow:hover {
+.triangle-arrow:hover:not(.activated) {
   color: var(--black);
 }
 
