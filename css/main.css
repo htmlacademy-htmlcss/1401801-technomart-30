@@ -123,6 +123,8 @@ img {
 }
 
 .button {
+  display: flex;
+  justify-content: center;
   font-size: 14px;
   line-height: 18px;
   color: var(--white);
@@ -1895,7 +1897,6 @@ img {
   align-items: center;
   justify-content: center;
   padding-top: 68px;
-  padding-bottom: 37px;
 }
 
 .catalog-card-pop-up::before {
@@ -1912,6 +1913,9 @@ img {
   font-size: 24px;
   line-height: 30px;
   font-weight: 700;
+  max-width: 420px;
+  margin-bottom: 68px;
+  text-align: center;
 }
 
 .include-success::before {
@@ -1920,47 +1924,40 @@ img {
   width: 66px;
   height: 66px;
   left: -90px;
-  top: -20px;
+  top: 50%;
+  transform: translateY(-50%);
   background: url(../img/icons/icon-mark.svg) no-repeat 0 0;
 }
 
 .pop-up-bottom {
   position: relative;
-  width: 620px;
   display: flex;
   justify-content: center;
   align-items: center;
-  margin-top: 105px;
-}
-
-.pop-up-bottom::before {
-  content: "";
-  position: absolute;
-  width: 620px;
-  height: 112px;
+  padding: 37px 113px;
   background-color: var(--pop-up-bottom);
-  z-index: -1;
 }
 
 .catalog-pop-up-btn {
-  display: flex;
-  justify-content: center;
   padding-left: 46px;
   padding-right: 46px;
-  text-transform: uppercase;
   margin-right: 10px;
 }
 
 .catalog-continue-btn {
-  display: flex;
   padding: 10px 32px;
   background-color: var(--white);
   color: var(--black);
-  justify-content: center;
-  text-transform: uppercase;
-  font-size: 14px;
-  line-height: 18px;
+}
 
+.catalog-continue-btn:hover {
+  opacity: 0.8;
+  background-color: var(--white);
+}
+
+.catalog-continue-btn:active {
+  background-color: var(--white);
+  opacity: 0.5;
 }
 
 .modal-map {
