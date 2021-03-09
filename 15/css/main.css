@@ -308,9 +308,8 @@ img {
 .midle-header-wrapper {
   display: flex;
   align-items: flex-start;
-  margin-top: 40px;
-  padding-left: 62px;
-  padding-top: 4px;
+  margin-top: 44px;
+  justify-content: space-between;
 }
 
 .subtitle {
@@ -320,7 +319,7 @@ img {
   color: var(--red);
   width: 198px;
   margin-top: 0;
-  margin-right: 90px;
+  padding-left: 30px;
 }
 
 .contact-wrapper {
@@ -329,6 +328,7 @@ img {
   justify-content: center;
   align-items: center;
   padding-top: 3px;
+  padding-left: 25px;
 }
 
 .header-phone {
@@ -366,7 +366,6 @@ img {
 .sign-in-up-wrapper {
   display: flex;
   padding-top: 2px;
-  margin-left: 68px;
 }
 
 .sign-in {
@@ -430,13 +429,15 @@ img {
   list-style: none;
   margin: 0;
   margin-top: 30px;
+  padding-left: 40px;
+  padding-right: 40px;
 }
 
 .nav-item {
   margin-right: 30px;
 }
 
-.nav-itemm:last-child {
+.nav-item:last-child {
   margin-right: 0;
 }
 
@@ -790,7 +791,6 @@ img {
 
 .card-img {
   width: 184px;
-  object-fit: contain;
   position: relative;
   display: flex;
   align-items: center;
@@ -1184,7 +1184,6 @@ img {
 }
 
 .footer-logo {
-  height: auto;
   padding-top: 20px;
   padding-bottom: 20px;
 }
@@ -1225,6 +1224,10 @@ img {
   text-decoration: none;
 }
 
+.footer-nav-wrapper .nav-list {
+  padding-right: 0;
+}
+
 .bottom-navigation {
   margin: 0;
   margin-top: 34px;
@@ -1259,8 +1262,9 @@ img {
   justify-content: space-between;
   margin: 0;
   margin-left: auto;
-  margin-right: 117px;
+  margin-right: auto;
   padding: 0;
+  padding-left: 36px;
 }
 
 .socials-button {
