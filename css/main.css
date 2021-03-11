@@ -431,6 +431,7 @@ img {
   margin-top: 30px;
   padding-left: 40px;
   padding-right: 40px;
+  box-shadow: inset 0px -5px 0px var(--header-blue);
 }
 
 .nav-item {
@@ -691,10 +692,6 @@ img {
   right: 0;
   background: url(../img/icons/slider-arrow.svg) no-repeat 0 0;
   transform: rotate(180deg);
-}
-
-.current {
-  display: flex;
 }
 
 .slider-button {
@@ -1087,10 +1084,6 @@ img {
 
 }
 
-.current-slide {
-  display: block;
-}
-
 .info-block {
   display: flex;
   justify-content: space-between;
@@ -1226,6 +1219,7 @@ img {
 
 .footer-nav-wrapper .nav-list {
   padding-right: 0;
+  box-shadow: none;
 }
 
 .bottom-navigation {
@@ -1336,6 +1330,25 @@ img {
 
 /* Catalog */
 
+.logout-btn {
+  position: absolute;
+  top: 0;
+  right: 1px;
+  padding-top: 13px;
+  padding-right: 15px;
+  padding-left: 15px;
+  background-color: var(--white);
+  padding-bottom: 8px;
+}
+
+.logout-btn:hover .user-icon {
+  color: var(--logo-sign-in);
+}
+
+.logout-btn:active .user-icon {
+  color: var(--basic-greylight);
+}
+
 .catalog-page-header {
   margin-bottom: 0;
 }
@@ -1345,13 +1358,18 @@ img {
   padding-right: 24px;
 }
 
+.catalog-contact-wrapper {
+  padding-top: 4px;
+  padding-left: 43px;
+}
+
 .user-wrapper {
+  position: relative;
   width: 300px;
   display: flex;
   flex-wrap: wrap;
   flex-direction: column;
   align-items: center;
-  margin-left: 51px;
   margin-top: 3px;
 }
 
@@ -1734,7 +1752,6 @@ img {
   content: "";
   width: 25px;
   height: 25px;
-  top: 62px;
   left: 0;
   background: url(../img/icons/radio-off.svg) no-repeat 0 0;
   opacity: 0.8;
@@ -1963,6 +1980,7 @@ img {
   align-items: center;
   justify-content: center;
   padding-top: 68px;
+  z-index: 200;
 }
 
 .catalog-card-pop-up::before {
@@ -2035,6 +2053,7 @@ img {
   width: 940px;
   height: 425px;
   box-shadow: 0 0 20px var(--card-shadow);
+  z-index: 200;
 }
 
 .map-container {
@@ -2087,6 +2106,7 @@ img {
   box-sizing: border-box;
   box-shadow: 0 0 10px var(--black);
   padding: 40px 80px 37px 80px;
+  z-index: 200;
 }
 
 .modal-feedback::before {
@@ -2105,6 +2125,7 @@ img {
   width: 100%;
   height: 112px;
   left: 0;
+  bottom: 0;
   background-color: var(--modal-btn-color);
   z-index: -1;
 }
@@ -2141,8 +2162,116 @@ img {
   width: 460px;
   border: none;
   margin-top: 37px;
+  display: inline-block;
 }
 
 .feedback-btn:focus {
   outline: none;
+}
+
+@keyframes bounce {
+  0% {
+    -webkit-transform: translate(-50%, -200%);
+    transform: translate(-50%, -200%)
+  }
+
+  to {
+    -webkit-transform: translate(-50%, -50%);
+    transform: translate(-50%, -50%)
+  }
+}
+
+@-webkit-keyframes bounce {
+  0% {
+    -webkit-transform: translate(-50%, -200%);
+    transform: translate(-50%, -200%)
+  }
+
+  to {
+    -webkit-transform: translate(-50%, -50%);
+    transform: translate(-50%, -50%)
+  }
+}
+
+@keyframes shake {
+
+  10%,
+  30%,
+  50%,
+  70%,
+  90% {
+    -webkit-transform: translate(-55%, -50%);
+    transform: translate(-55%, -50%)
+  }
+
+  20%,
+  40%,
+  60%,
+  80% {
+    -webkit-transform: translate(-55%, -50%);
+    transform: translate(-45%, -50%)
+  }
+}
+
+@-webkit-keyframes shake {
+
+  10%,
+  30%,
+  50%,
+  70%,
+  90% {
+    -webkit-transform: translate(-55%, -50%);
+    transform: translate(-55%, -50%)
+  }
+
+  20%,
+  40%,
+  60%,
+  80% {
+    -webkit-transform: translate(-55%, -50%);
+    transform: translate(-45%, -50%)
+  }
+}
+
+@keyframes include-success {
+  0% {
+    opacity: 0;
+  }
+
+  to {
+    opacity: 1;
+  }
+}
+
+@-webkit-keyframes include-success {
+  0% {
+    opacity: 0;
+  }
+
+  to {
+    opacity: 1;
+  }
+}
+
+
+.current-js {
+  display: flex;
+}
+
+.include-success-show-js {
+  display: flex;
+  animation: include-success .5s;
+}
+
+.current-slide-js {
+  display: block;
+}
+
+.modal-show-js {
+  display: block;
+  animation: bounce .4s;
+}
+
+.modal-error-js {
+  animation: shake .10s;
 }
