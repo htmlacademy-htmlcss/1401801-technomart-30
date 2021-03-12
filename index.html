@@ -84,7 +84,7 @@
         <a href="#" class="offers-link">Для стройки</a>
       </div>
       <div class="slider-list">
-        <div class="first-slider-container slider current">
+        <div class="first-slider-container slider current-js">
           <div class="slider-header-wrapper">
             <span class="slider-header">Перфораторы</span>
             <span class="slider-slogan">Настоящие мужские игрушки</span>
@@ -99,9 +99,9 @@
           <a href="catalog.html" class="button slider-button">Открыть каталог</a>
         </div>
         <div class="slider-radio-wrapper">
-          <input class="visually-hidden filter-input-radio" type="radio" id="b1" name="slide" checked>
+          <input class="visually-hidden filter-input-radio" type="radio" id="b1" name="slide" checked disabled>
           <label class="radio-1" for="b1"></label>
-          <input class="visually-hidden filter-input-radio" type="radio" id="b2" name="slide">
+          <input class="visually-hidden filter-input-radio" type="radio" id="b2" name="slide" disabled>
           <label class="radio-1" for="b2"></label>
         </div>
         <button type="button" class="arrow arrow-left"></button>
@@ -223,7 +223,7 @@
               name="navigation">
             <label for="button-3" class="slider-title services-slider-btn">Кредит</label>
           </div>
-          <div class="slide slide-first current-slide">
+          <div class="slide slide-first current-slide-js">
             <h3 class="service-caption">Доставка</h3>
             <p class="slogan services-slider-slogan">Мы&nbsp;с&nbsp;удовольствием доставим ваш товар
               прямо к&nbsp;вашему подъезду совершенно бесплатно! Ведь&nbsp;мы&nbsp;неплохо заработаем,
@@ -240,7 +240,8 @@
           </div>
           <div class="slide slide-third">
             <h3 class="service-caption">Кредит</h3>
-            <p class="slogan services-slider-slogan">Залезть в&nbsp;долговую яму стало проще! Кредитные&nbsp;консультанты придут вам на&nbsp;помощь.</p>
+            <p class="slogan services-slider-slogan">Залезть в&nbsp;долговую яму стало проще!
+              Кредитные&nbsp;консультанты придут вам на&nbsp;помощь.</p>
             <a href="#" class="button credit-btn">отправить заявку</a>
           </div>
         </div>
@@ -338,21 +339,30 @@
       width="940" height="425" allowfullscreen="" title="Место расположение Техномарта"></iframe>
     <button type="button" class="modal-close" aria-label="Закрыть"></button>
   </section>
-  <form class="modal-feedback">
-    <button class="modal-close modal-close-feedback"></button>
+  <form class="modal-feedback" action="https://echo.htmlacademy.ru/" method="POST">
+    <button type="button" class="modal-close modal-close-feedback"></button>
     <div class="top-feedback-wrapper">
       <label class="feedback-field">
         Ваше имя:
-        <input class="form-border form-place" type="text" name="name" placeholder="Имя Фамилия" required>
+        <input class="form-border form-place" type="text" name="nameLal" placeholder="Имя Фамилия">
       </label>
       <label class="feedback-field">Ваш e-mail
-        <input class="form-border form-place" type="text" name="e-mail" placeholder="email@example.com" required>
+        <input class="form-border form-place" type="text" name="email" placeholder="email@example.com">
       </label>
     </div>
     <label for="text-letter">Текст письма:</label>
     <textarea class="letter form-border" name="letter" id="text-letter" placeholder="В свободной форме"></textarea>
     <button class="button feedback-btn" type="submit">Отправить</button>
   </form>
+  <section class="catalog-card-pop-up">
+    <span class="include-success">Товар добавлен в корзину!</span>
+    <button class="modal-close modal-close-feedback"></button>
+    <div class="pop-up-bottom">
+      <a class="button catalog-pop-up-btn" href="#">Оформить заказ</a>
+      <a class="button catalog-continue-btn" href="#">Продолжить покупки</a>
+    </div>
+  </section>
+  <script src="js/main.js"></script>
 </body>
 
 </html>
