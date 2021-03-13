@@ -75,30 +75,34 @@ let righrArrow = document.querySelector('.arrow-right');
 let leftArrow = document.querySelector('.arrow-left')
 let puncherSlide = document.querySelector('.first-slider-container');
 let drillSlide = document.querySelector('.second-slider-container');
-let firstRadio = document.getElementById('b1');
-let secondRadio = document.getElementById('b2');
+let firstCarouselBtn = document.getElementById('first-carousel-btn');
+let secondCarouselBtn = document.getElementById('second-carousel-btn');
 righrArrow && righrArrow.addEventListener('click', function(evt) {
   if (puncherSlide.classList.contains('current-js')){
     puncherSlide.classList.remove('current-js');
     drillSlide.classList.add('current-js');
-    secondRadio.checked = true;
+    firstCarouselBtn.classList.remove('slider-tab-active-js')
+    secondCarouselBtn.classList.add('slider-tab-active-js');
   }
   else {
     drillSlide.classList.remove('current-js');
     puncherSlide.classList.add('current-js');
-    firstRadio.checked = true;
+    secondCarouselBtn.classList.remove('slider-tab-active-js');
+    firstCarouselBtn.classList.add('slider-tab-active-js');
   }
 })
 leftArrow && leftArrow.addEventListener('click', function(){
   if (puncherSlide.classList.contains('current-js')){
     puncherSlide.classList.remove('current-js');
     drillSlide.classList.add('current-js');
-    secondRadio.checked = true;
+    firstCarouselBtn.classList.remove('slider-tab-active-js')
+    secondCarouselBtn.classList.add('slider-tab-active-js');
   }
   else {
     drillSlide.classList.remove('current-js');
     puncherSlide.classList.add('current-js');
-    firstRadio.checked = true;
+    secondCarouselBtn.classList.remove('slider-tab-active-js');
+    firstCarouselBtn.classList.add('slider-tab-active-js');
   }
 })
 
@@ -106,7 +110,6 @@ leftArrow && leftArrow.addEventListener('click', function(){
 let buyLink = document.querySelectorAll('.hover-buy-btn');
 let buyPopup = document.querySelector('.catalog-card-pop-up');
 let buyClose = buyPopup.querySelector('.modal-close');
-let counters = [];
 for (i=0; i<buyLink.length; i++) {
   buyLink[i].addEventListener('click', function(evt) {
     evt.preventDefault();
