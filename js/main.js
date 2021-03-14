@@ -49,78 +49,92 @@ feedbackForm && feedbackForm.addEventListener('submit', function (evt) {
   }
 })
 // Service Slider
-let sliderChboxFirst = document.getElementById('button-1')
-let sliderChboxSecond = document.getElementById('button-2')
-let sliderChboxThird = document.getElementById('button-3')
+let sliderTabFirst = document.getElementById('services-tab-1')
+let sliderTabSecond = document.getElementById('services-tab-2')
+let sliderTabThird = document.getElementById('services-tab-3')
 let slideFirst = document.querySelector('.slide-first');
 let slideSecond = document.querySelector('.slide-second');
 let slideThird = document.querySelector('.slide-third');
-sliderChboxFirst && sliderChboxFirst.addEventListener('click', function(){
+sliderTabFirst && sliderTabFirst.addEventListener('click', function () {
   slideFirst.classList.add('current-slide-js');
   slideSecond.classList.remove('current-slide-js');
   slideThird.classList.remove('current-slide-js');
+  sliderTabFirst.classList.add('services-slider-btn-active');
+  sliderTabSecond.classList.remove('services-slider-btn-active');
+  sliderTabThird.classList.remove('services-slider-btn-active');
 })
-sliderChboxSecond && sliderChboxSecond.addEventListener('click', function(){
+sliderTabSecond && sliderTabSecond.addEventListener('click', function () {
   slideThird.classList.remove('current-slide-js');
   slideFirst.classList.remove('current-slide-js');
   slideSecond.classList.add('current-slide-js');
+  sliderTabSecond.classList.add('services-slider-btn-active');
+  sliderTabFirst.classList.remove('services-slider-btn-active');
+  sliderTabThird.classList.remove('services-slider-btn-active');
 })
-sliderChboxThird && sliderChboxThird.addEventListener('click', function() {
+sliderTabThird && sliderTabThird.addEventListener('click', function () {
   slideSecond.classList.remove('current-slide-js');
   slideFirst.classList.remove('current-slide-js');
   slideThird.classList.add('current-slide-js');
+  sliderTabThird.classList.add('services-slider-btn-active');
+  sliderTabSecond.classList.remove('services-slider-btn-active');
+  sliderTabFirst.classList.remove('services-slider-btn-active');
 })
-// Лютый слайдер
-let righrArrow = document.querySelector('.arrow-right');
-let leftArrow = document.querySelector('.arrow-left')
-let puncherSlide = document.querySelector('.first-slider-container');
-let drillSlide = document.querySelector('.second-slider-container');
-let firstRadio = document.getElementById('b1');
-let secondRadio = document.getElementById('b2');
-righrArrow && righrArrow.addEventListener('click', function(evt) {
-  if (puncherSlide.classList.contains('current-js')){
-    puncherSlide.classList.remove('current-js');
-    drillSlide.classList.add('current-js');
-    secondRadio.checked = true;
+// Carousel
+let sliderItems = document.querySelectorAll('.slider');
+let arrows = document.querySelectorAll('.arrow');
+let sliderTab = document.querySelectorAll('.slider-tab');
+
+if (arrows.length)  {
+  for (e = 0; e < arrows.length; e++) {
+    let currentArrow = arrows[e];
+
+    currentArrow.addEventListener('click', function(){
+      let delta = currentArrow.classList.contains('arrow-right') ? 1 : -1;
+      let activeSlide;
+
+      for (i = 0; i < sliderItems.length; i++) {
+        if (sliderItems[i].classList.contains('current-js')) {
+          activeSlide = i;
+          break;
+        }
+      }
+
+      let newIndex = activeSlide + delta ;
+
+      if (newIndex < 0) {
+        newIndex = sliderItems.length - 1 ;
+      }
+
+      if (newIndex >= sliderItems.length) {
+        newIndex = 0;
+      }
+
+      sliderItems[activeSlide].classList.remove('current-js');
+      sliderItems[newIndex].classList.add('current-js');
+      sliderTab[activeSlide].classList.remove('slider-tab-active-js');
+      sliderTab[newIndex].classList.add('slider-tab-active-js');
+    })
   }
-  else {
-    drillSlide.classList.remove('current-js');
-    puncherSlide.classList.add('current-js');
-    firstRadio.checked = true;
-  }
-})
-leftArrow && leftArrow.addEventListener('click', function(){
-  if (puncherSlide.classList.contains('current-js')){
-    puncherSlide.classList.remove('current-js');
-    drillSlide.classList.add('current-js');
-    secondRadio.checked = true;
-  }
-  else {
-    drillSlide.classList.remove('current-js');
-    puncherSlide.classList.add('current-js');
-    firstRadio.checked = true;
-  }
-})
+}
 
 // Добавление в корзину
 let buyLink = document.querySelectorAll('.hover-buy-btn');
 let buyPopup = document.querySelector('.catalog-card-pop-up');
 let buyClose = buyPopup.querySelector('.modal-close');
-let counters = [];
-for (i=0; i<buyLink.length; i++) {
-  buyLink[i].addEventListener('click', function(evt) {
+for (i = 0; i < buyLink.length; i++) {
+  buyLink[i].addEventListener('click', function (evt) {
     evt.preventDefault();
     buyPopup.classList.add('include-success-show-js');
   })
 }
-buyClose.addEventListener('click', function(evt) {
+buyClose.addEventListener('click', function (evt) {
   evt.preventDefault();
   buyPopup.classList.remove('include-success-show-js');
 })
 window.addEventListener('keydown', function (evt) {
-   if (evt.keyCode === 27) {
+  if (evt.keyCode === 27) {
     if (buyPopup.classList.contains('include-success-show-js')) {
-       buyPopup.classList.remove('include-success-show-js');
-     }
+      buyPopup.classList.remove('include-success-show-js');
+    }
   }
-  })
+})
