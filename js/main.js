@@ -82,43 +82,41 @@ sliderTabThird && sliderTabThird.addEventListener('click', function () {
 // Carousel
 let sliderItems = document.querySelectorAll('.slider');
 let arrows = document.querySelectorAll('.arrow');
-let righrArrow = document.querySelector('.arrow-right');
-let leftArrow = document.querySelector('.arrow-left')
 let sliderTab = document.querySelectorAll('.slider-tab');
 
-for (j = 0; j < arrows.length; j++) {
-  arrows[j] && arrows[j].addEventListener('click', function () {
-    if (arrows[j] && arrows[j].classList.contains('arrow-right')) {
+if (arrows.length)  {
+  for (e = 0; e < arrows.length; e++) {
+    let currentArrow = arrows[e];
+
+    currentArrow.addEventListener('click', function(){
+      let delta = currentArrow.classList.contains('arrow-right') ? 1 : -1;
+      let activeSlide;
+
       for (i = 0; i < sliderItems.length; i++) {
         if (sliderItems[i].classList.contains('current-js')) {
           activeSlide = i;
+          break;
         }
       }
-      sliderTab[activeSlide].classList.remove('slider-tab-active-js');
-      sliderTab[activeSlide + 1] && sliderTab[activeSlide + 1].classList.add('slider-tab-active-js');
-      sliderItems[activeSlide].classList.remove('current-js');
-      let nextSlide = sliderItems[activeSlide + 1];
-      let nextIndex = [(activeSlide + 1) - sliderItems.length]
-      nextSlide && nextSlide.classList.add('current-js');
-      sliderItems[nextIndex] && sliderItems[nextIndex].classList.add('current-js');
-      sliderTab[nextIndex] && sliderTab[nextIndex].classList.add('slider-tab-active-js');
-    } else {
-      for (i = 0; i < sliderItems.length; i++) {
-        if (sliderItems[i].classList.contains('current-js')) {
-          activeSlide = i;
-        }
+
+      let newIndex = activeSlide + delta ;
+
+      if (newIndex < 0) {
+        newIndex = sliderItems.length - 1 ;
       }
-      sliderTab[activeSlide].classList.remove('slider-tab-active-js');
-      sliderTab[activeSlide - 1] && sliderTab[activeSlide - 1].classList.add('slider-tab-active-js');
+
+      if (newIndex >= sliderItems.length) {
+        newIndex = 0;
+      }
+
       sliderItems[activeSlide].classList.remove('current-js');
-      let previousSlide = sliderItems[activeSlide - 1];
-      let previousIndex = [(activeSlide - 1) + sliderItems.length];
-      previousSlide && previousSlide.classList.add('current-js');
-      sliderItems[previousIndex] && sliderItems[previousIndex].classList.add('current-js');
-      sliderTab[previousIndex] && sliderTab[previousIndex].classList.add('slider-tab-active-js')
-    }
-  })
+      sliderItems[newIndex].classList.add('current-js');
+      sliderTab[activeSlide].classList.remove('slider-tab-active-js');
+      sliderTab[newIndex].classList.add('slider-tab-active-js');
+    })
+  }
 }
+
 // Добавление в корзину
 let buyLink = document.querySelectorAll('.hover-buy-btn');
 let buyPopup = document.querySelector('.catalog-card-pop-up');

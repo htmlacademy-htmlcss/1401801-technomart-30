@@ -1154,10 +1154,15 @@ img {
 }
 
 .services-slider-btn {
+  font-weight: 700;
+  font-size: 21px;
+  line-height: 30px;
+  text-align: left;
   display: block;
   padding: 14px 22px 18px 22px;
   background-color: var(--nav-blue);
   color: var(--white);
+  border: none;
   -webkit-box-shadow: 0px 1px 0px var(--nav-blue), inset 0px 1px 0px var(--blue-shadow);
   box-shadow: 0px 1px 0px var(--nav-blue), inset 0px 1px 0px var(--blue-shadow);
 }
@@ -1171,12 +1176,6 @@ img {
   color: var(--nav-blue);
   -webkit-box-shadow: 0px 1px 0px var(--white);
   box-shadow: 0px 1px 0px var(--white);
-}
-
-.slider-title {
-  font-weight: 700;
-  font-size: 21px;
-  line-height: 30px;
 }
 
 .slide {
