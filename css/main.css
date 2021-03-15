@@ -894,10 +894,11 @@ img {
   display: -ms-flexbox;
   display: flex;
   opacity: 1;
+  pointer-events: auto;
 }
 
-.card-item:hover .card-img {
-  opacity: 0;
+.card-pop-up:focus-within {
+  opacity: 1;
 }
 
 .card-img {
@@ -949,22 +950,24 @@ img {
 }
 
 .card-pop-up {
+  pointer-events: none;
   opacity: 0;
   position: absolute;
   display: flex;
-  top: 38px;
-  right: 43px;
+  top: 36px;
   -webkit-box-orient: vertical;
   -webkit-box-direction: normal;
   -ms-flex-direction: column;
   flex-direction: column;
   -webkit-box-pack: justify;
   -ms-flex-pack: justify;
-  justify-content: space-between;
+  justify-content: center;
   -webkit-box-align: center;
   -ms-flex-align: center;
   align-items: center;
   background-color: var(--white);
+  width: 100%;
+  height: 90px;
 }
 
 .hover-button {
@@ -987,7 +990,7 @@ img {
 
 .hover-buy-btn {
   position: relative;
-  padding: 9px 39px 10px 54px;
+  padding: 10px 41px 10px 52px;
   background-color: var(--button-green);
   margin-bottom: 10px;
   -webkit-box-shadow: inset 0px -3px 0px var(--green-shadow);
@@ -1015,8 +1018,7 @@ img {
 }
 
 .hover-cart-btn {
-  width: 130px;
-  padding: 8px 0 6px 0;
+  padding: 7px 32px 7px 29px;
   border: 3px solid var(--button-green);
   color: var(--nav-blue);
 }
